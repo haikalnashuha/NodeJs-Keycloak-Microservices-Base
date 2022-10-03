@@ -1,0 +1,27 @@
+{
+  "name": "microservicestut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app1": "cd app1 && node index.js",
+    "app1-dev": "cd app1 && nodemon index.js",
+    "app1-install": "cd app1 && npm ci",
+
+    "app2": "cd app2 && node index.js",
+    "app2-dev": "cd app2 && nodemon index.js",
+    "app2-install": "cd app2 && npm ci",
+    
+    "gateway": "cd gateway && node index.js",
+    "gateway-dev": "cd gateway && nodemon index.js",
+    "gateway-install": "cd gateway && npm ci",
+    
+    "project-install": "npm run app1-install && npm run app2-install && npm run gateway-install",
+
+    "start": "npm run app1 & npm run app2 & npm run gateway",
+    "start-dev": "npm run app1-dev & npm run app2-dev & npm run gateway-dev"
+  },
+  "author": "",
+  "license": "MIT"
+}
